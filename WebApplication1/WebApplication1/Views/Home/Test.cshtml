@@ -1,0 +1,34 @@
+﻿@using WebApplication1.Models;
+@*<h4>viewbag</h4>
+<ul>
+	@foreach(Student student in ViewBag.Students)
+	{
+	<li>@student.Name-@student.Surname -@student.Point</li>
+	}
+</ul>
+
+
+
+<h4>viewdata</h4>
+	@foreach(Student student in (List<Student>)ViewData["Students"])
+	{
+	<li>@student.Name-@student.Surname -@student.Point</li>
+	}
+
+
+
+<h4>Tempdata</h4>
+<ul>
+	@foreach (Student student in (List<Student>)TempData["Students"])
+	{
+		<li>@student.Name-@student.Surname -@student.Point</li>
+	}
+
+</ul>
+
+*@
+
+
+<p>@ViewBag.Name -views</p>
+<p>@ViewData["name"] -viewdata</p>
+<p>@TempData["name"] -tempdata</p>
